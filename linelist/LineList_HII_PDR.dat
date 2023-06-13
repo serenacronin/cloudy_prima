@@ -125,13 +125,10 @@ H  1  2.62513m		# Br beta  H n=6 -> n=4
 H  1  4.05113m		# Br alpha H n=5 -> n=4
 Ar 2  6.98337m		# Stout, 1 2
 Ar 3  8.98898m		# Stout, 1 2
-H2    9.66228m          # 0-0 S(3)
 S  4  10.5076m		# Chianti, 1 2
-H2    12.2753m          # 0-0 S(2)
 Ne 2  12.8101m		# Stout, 1 2
 Cl 2  14.3639m		# Chianti, 1 2
 Ne 3  15.5509m		# Stout, 1 2
-H2    17.0302m          # 0-0 S(1)
 S  3  18.7078m		# Stout, 2 3
 Ar 3  21.8253m		# Stout, 2 3
 O  4  25.8832m		# Chianti, 1 2
@@ -158,3 +155,4 @@ CN    660.727m
 CO    866.727m          #  3-2
 CO    1300.05m          #  2-1
 CO    2600.05m          #  1-0
+

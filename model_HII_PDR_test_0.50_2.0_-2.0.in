@@ -1,0 +1,183 @@
+#####################################
+title model_HII_PDR_test_0.50_2.0_-2.0
+#####################################
+set punch prefix "model_HII_PDR_test_0.50_2.0_-2.0"
+table star "BC03_chab.mod" 0.040000 10.000000
+ionization parameter = -2.000
+hden = 2.000
+filling factor = 1.0
+abundances "dzetaO_0.50.abn" no grains
+iterate to convergence
+sphere
+element limit off -8
+grains ism
+grains PAH
+set temperature convergence -2.3
+cosmic rays background, set csupra -16.64
+set nchrg 2
+set nend 2000
+stop temperature 3 linear
+stop AV point 10 linear
+save last linelist  emergent  ".lin" "/Users/serenac/Desktop/research/PRIMA/c22.02/data/LineList_HII_PDR.dat" absolute
+save last continuum ".cont"
+save last physical conditions ".phy"
+save last radius ".rad"
+save last lines emissivity  emergent  ".emis"
+H  1  1215.67A
+O  1  1302.17A
+O  4  1397.20A
+O  4  1399.77A
+N  4  1486.50A
+N  4  1483.32A
+C  4  1548.19A
+C  4  1550.78A
+He 2  1640.43A
+O  3  1660.81A
+O  3  1666.15A
+Ne 3  1814.56A
+Al 3  1854.72A
+Al 3  1862.79A
+C  3  1906.68A
+C  3  1908.73A
+N  2  2139.01A
+N  2  2142.78A
+O  3  2320.95A
+C  2  2323.50A
+C  2  2324.69A
+C  2  2325.40A
+C  2  2326.93A
+C  2  2328.12A
+Ne 4  2421.66A
+Ne 4  2424.28A
+O  2  2470.22A
+O  2  2470.34A
+Al 2  2660.35A
+Al 2  2669.15A
+Mg 2  2795.53A
+Mg 2  2802.71A
+Ar 3  3109.18A
+Fe 2  3133.05A
+Fe 2  3133.43A
+Fe 2  3133.44A
+Fe 2  3133.75A
+He 2  3203.04A
+Ne 3  3342.18A
+Ne 5  3345.99A
+Ne 5  3426.03A
+S  3  3721.63A
+O  2  3726.03A
+O  2  3728.81A
+H  1  3797.89A
+H  1  3835.38A
+Ne 3  3868.76A
+He 1  3888.63A
+H  1  3889.05A
+Ne 3  3967.47A
+H  1  3970.07A
+He 1  4026.20A
+S  2  4068.60A
+S  2  4076.35A
+H  1  4101.73A
+Fe 2  4231.55A
+H  1  4340.46A
+O  3  4363.21A
+He 1  4471.49A
+Fe 2  4492.63A
+C  1  4621.57A
+Fe 2  4648.24A
+Fe 2  4648.94A
+C  3  4649.00A
+Ar 4  4711.26A
+Ne 4  4714.23A
+Ne 4  4715.64A
+Ne 4  4724.17A
+Ne 4  4725.58A
+H  1  4861.33A
+O  3  4958.91A
+O  3  5006.84A
+Ar 3  5191.82A
+N  1  5197.90A
+N  1  5200.26A
+Cl 3  5517.71A
+Cl 3  5537.87A
+O  1  5577.34A
+N  2  5754.61A
+He 1  5875.64A
+O  1  6300.30A
+S  3  6312.06A
+O  1  6363.78A
+O  1  6391.73A
+N  2  6548.05A
+H  1  6562.81A
+N  2  6583.45A
+He 1  6678.15A
+S  2  6716.44A
+S  2  6730.82A
+He 1  7065.22A
+Ar 3  7135.79A
+O  2  7318.92A
+O  2  7319.99A
+O  2  7329.67A
+O  2  7330.73A
+Ar 4  7332.15A
+Ar 3  7751.11A
+Cl 2  8578.70A
+C  1  8727.13A
+H  1  9014.87A
+S  3  9068.62A
+Cl 2  9123.60A
+H  1  9228.97A
+S  3  9530.62A
+H  1  9545.93A
+C  1  9824.13A
+C  1  9850.26A
+H  1  1.00493m
+S  2  1.02867m
+S  2  1.03205m
+S  2  1.03364m
+S  2  1.03705m
+He 1  1.08303m
+H  1  1.09380m
+H  1  1.28180m
+Fe 2  1.64355m
+H  1  1.73620m
+H  1  1.81740m
+H  1  1.87510m
+H  1  1.94454m
+He 1  2.05813m
+H  1  2.16551m
+H  1  2.62513m
+H  1  4.05113m
+Ar 2  6.98337m
+Ar 3  8.98898m
+S  4  10.5076m
+Ne 2  12.8101m
+Cl 2  14.3639m
+Ne 3  15.5509m
+S  3  18.7078m
+Ar 3  21.8253m
+O  4  25.8832m
+Fe 2  25.9811m
+P  2  32.8620m
+S  3  33.4704m
+Si 2  34.8046m
+Ne 3  36.0036m
+O  3  51.8004m
+N  3  57.3238m
+P  2  60.6263m
+O  1  63.1679m
+O  3  88.3323m
+N  2  121.767m
+O  1  145.495m
+C  2  157.636m
+N  2  205.244m
+C  1  370.269m
+HCN   483.168m
+CS    510.044m
+C  1  609.590m
+CO    650.074m
+CN    660.727m
+CO    866.727m
+CO    1300.05m
+CO    2600.05m
+end of lines

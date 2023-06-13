@@ -7,18 +7,18 @@ from astropy.table import Table, hstack
 
 zone = 'HII_PDR'
 
-# The directories in which we will have the models
-#dir_HII = '/home/ptheule/simulations_CLOUDY/PDR/nebular_HII_PDR/models_HII_grains/'
-#dir_HII = '/home/ptheule/simulations_CLOUDY/PDR/nebular_HII_PDR/models_HII_grains_reduced/'
-dir_HII = '/home/ptheule/simulations_CLOUDY/PDR/nebular_HII_PDR/models_HII_grains_full/'
-model_name_HII = 'model_HII'
-#dir_HII_nograin = '/home/ptheule/simulations_CLOUDY/PDR/nebular_HII_PDR/models_HII_nograin/'
-#dir_HII_nograin = '/home/ptheule/simulations_CLOUDY/PDR/nebular_HII_PDR/models_HII_nograin_reduced/'
-dir_HII_nograin = '/home/ptheule/simulations_CLOUDY/PDR/nebular_HII_PDR/models_HII_nograin_full/'
-model_name_HII_nograin = 'model_HII'
-#dir_HII_PDR = '/home/ptheule/simulations_CLOUDY/PDR/nebular_HII_PDR/models_HII_PDR/'
-#dir_HII_PDR = '/home/ptheule/simulations_CLOUDY/PDR/nebular_HII_PDR/models_HII_PDR_reduced/'
-dir_HII_PDR = '/home/ptheule/simulations_CLOUDY/PDR/nebular_HII_PDR/models_HII_PDR_full/'
+# # The directories in which we will have the models
+# #dir_HII = '/home/ptheule/simulations_CLOUDY/PDR/nebular_HII_PDR/models_HII_grains/'
+# #dir_HII = '/home/ptheule/simulations_CLOUDY/PDR/nebular_HII_PDR/models_HII_grains_reduced/'
+# dir_HII = '/home/ptheule/simulations_CLOUDY/PDR/nebular_HII_PDR/models_HII_grains_full/'
+# model_name_HII = 'model_HII'
+# #dir_HII_nograin = '/home/ptheule/simulations_CLOUDY/PDR/nebular_HII_PDR/models_HII_nograin/'
+# #dir_HII_nograin = '/home/ptheule/simulations_CLOUDY/PDR/nebular_HII_PDR/models_HII_nograin_reduced/'
+# dir_HII_nograin = '/home/ptheule/simulations_CLOUDY/PDR/nebular_HII_PDR/models_HII_nograin_full/'
+# model_name_HII_nograin = 'model_HII'
+# #dir_HII_PDR = '/home/ptheule/simulations_CLOUDY/PDR/nebular_HII_PDR/models_HII_PDR/'
+# #dir_HII_PDR = '/home/ptheule/simulations_CLOUDY/PDR/nebular_HII_PDR/models_HII_PDR_reduced/'
+dir_HII_PDR = '/Users/serenac/Desktop/research/PRIMA/cloudy_prima/'
 model_name_HII_PDR = 'model_HII_PDR'
 
 
@@ -27,8 +27,8 @@ model_name_HII_PDR = 'model_HII_PDR'
 pc.log_.level = 1
 
 # reading the Cloudy outputs and putting them in a list of CloudyModel objects
-Ms = pc.load_models('{0}{1}'.format(dir_HII, model_name_HII), read_grains = False)
-Ms_nograin = pc.load_models('{0}{1}'.format(dir_HII_nograin, model_name_HII_nograin), read_grains = False)
+# Ms = pc.load_models('{0}{1}'.format(dir_HII, model_name_HII), read_grains = False)
+# Ms_nograin = pc.load_models('{0}{1}'.format(dir_HII_nograin, model_name_HII_nograin), read_grains = False)
 Ms_HII_PDR = pc.load_models('{0}{1}'.format(dir_HII_PDR, model_name_HII_PDR), read_grains = False)
 
 
@@ -40,7 +40,7 @@ line_index =[]
 
 def extract_parameters(modelname) :
     
-    en_tete ='{0}{1}'.format(dir_HII, model_name_HII) + '_'
+    en_tete ='{0}{1}'.format(dir_HII_PDR, model_name_HII_PDR) + '_'
     if modelname.startswith(en_tete):
         chaine_paremetres = modelname.replace(en_tete, '')     
     x = chaine_paremetres.partition('_')  
@@ -465,6 +465,6 @@ for li in range(len(line_list_name)) :
 
 print(t)
 
-t.write('lines_PDR_models_full.fits', format='fits', overwrite=True)
+t.write('/Users/serenac/Desktop/research/PRIMA/cloudy_prima/lines_PDR_models_full.fits', format='fits', overwrite=True)
 
 
